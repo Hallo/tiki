@@ -117,14 +117,16 @@
 % --- Main matter ---
 
 \section{Johdanto}
-Pariohjelmointi on ohjelmointimenetelmä, jossa kaksi ohjelmoijaa istuvat saman koneen ääressä ohjelmoimassa. Pariohjelmoinnissa ohjelmoijilla on kaksi eri roolia: kontrolloija ja tarkkailija. Kontrolloija on henkilö, joka kirjoittaa ohjelmakoodia, eli käyttää näppäimistöä ja hiirtä samalla, kun tarkkailija istuu vierestä ja etsii virheitä koodista. Tarkkailijan tulisi istua kontrolloijan vieressä ja nähdä monitori kokonaan. \cite{pairprogramming} 
+Pariohjelmointi on ohjelmointimenetelmä, jossa kaksi ohjelmoijaa istuvat saman koneen ääressä ohjelmoimassa. Pariohjelmoinnissa ohjelmoijilla on kaksi eri roolia: kontrolloija ja tarkkailija. Kontrolloija on henkilö, joka kirjoittaa ohjelmakoodia, eli käyttää näppäimistöä ja hiirtä samalla, kun tarkkailija istuu vierestä ja etsii virheitä koodista. Tarkkailijan tulisi istua kontrolloijan vieressä ja nähdä monitori kokonaan. \cite{pairprogramming2} 
 \newline
+Pariohjelmointi on hyvä tapa parantaa ongelmanratkaisukykyä ja ohjelmakoodin laatua.\cite{pairprogramming} Tämän tutkielman tavoitteena on tarkastella pariohjelmoinnin taloudellista kannattavuutta.
 Mitä on väärin~\cite{meta}
 
 \section{Kysymys}
-tot1 = singleImpl + singleMaintenance\newline
-tot2 = pairImpl + pairMaintenance\newline
-Onko tot2 < tot1
+Pariohjelmoinnissa toteutusvaiheessa käytetään enemmän miestyötunteja kuin yksin ohjelmoidessa.\cite{costandbenefit2} Paraneeko ohjelmakoodin laatu niin paljon, että ylläpitovaiheessa tarvittavilla miestyötunneilla saadaan yhteensä tarvittavat miestyötunnit pienemmäksi pariohjelmoidessa kuin yksilöinä ohjelmoidessa.\newline
+Yksilö miestyötunnit = Yksilö toteutusvaiheen miestyötunnit + Yksilö ylläpitovaiheen miestyötunnit\newline
+Pariohjelmoinnin miestyötunnit = Pariohjelmmoinnin toteutusvaiheen miestyötunnit + Pariohjelmoinnin ylläpitovaiheen miestyötunnit\newline
+Onko Pariohjelmoinnin miestyötunnit < Yksilö miestyötunnit
 \section{Menetelmä}
 \section{Case}
 \begin{center}
