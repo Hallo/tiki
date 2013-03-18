@@ -31,6 +31,8 @@
 \usepackage{microtype}
 \usepackage{amsfonts,amsmath,amssymb,amsthm,booktabs,color,enumitem,graphicx}
 \usepackage[pdftex,hidelinks]{hyperref}
+\usepackage{setspace}
+\doublespacing
 
 % Automatically set the PDF metadata fields
 \makeatletter
@@ -117,16 +119,30 @@
 % --- Main matter ---
 
 \section{Johdanto}
-Pariohjelmointi on ohjelmointimenetelmä, jossa kaksi ohjelmoijaa istuvat saman koneen ääressä ohjelmoimassa. Pariohjelmoinnissa ohjelmoijilla on kaksi eri roolia: kontrolloija ja tarkkailija. Kontrolloija on henkilö, joka kirjoittaa ohjelmakoodia, eli käyttää näppäimistöä ja hiirtä samalla, kun tarkkailija istuu vierestä ja etsii virheitä koodista. Tarkkailijan tulisi istua kontrolloijan vieressä ja nähdä monitori kokonaan. \cite{pairprogramming2} 
+Pariohjelmointi on ohjelmointimenetelmä, jossa kaksi ohjelmoijaa istuvat saman koneen ääressä ohjelmoimassa.\cite{pairprogramming2} Pariohjelmoinnissa ohjelmoijilla on kaksi eri roolia: kontrolloija ja tarkkailija. Kontrolloija on henkilö, joka kirjoittaa ohjelmakoodia, eli käyttää näppäimistöä ja hiirtä samalla, kun tarkkailija istuu vierestä ja etsii virheitä koodista. Tarkkailijan tulisi istua kontrolloijan vieressä ja nähdä monitori kokonaan. 
 \newline
-Pariohjelmointi on hyvä tapa parantaa ongelmanratkaisukykyä ja ohjelmakoodin laatua.\cite{pairprogramming} Tämän tutkielman tavoitteena on tarkastella pariohjelmoinnin taloudellista kannattavuutta.
+Pariohjelmointi on hyvä tapa parantaa ongelmanratkaisukykyä ja ohjelmakoodin laatua\cite{pairprogramming}. Tämän tutkielman tavoitteena on tarkastella pariohjelmoinnin taloudellista kannattavuutta.
 Mitä on väärin~\cite{meta}
 
+\section{Pariohjelmointi}
+\subsection{Historia}
+Pariohjelmointia on harrastettu pidempään kuin sitä on edes kutsuttu pariohjelmoinniksi.\cite{williams03pair} Varhaisimpia viittauksia pariohjelmointiin löytyy vuosilta 1953-1956\cite{williams96pair}.
+Pariohjelmointi kumminkin nousi vasta 1990 luvun lopulla pinnalle, kun se listatiin yhtenä XP ohjelmistokehityksen kahdestatoista käytänteestä \cite{beck00extreme}.
+
+
 \section{Kysymys}
-Pariohjelmoinnissa toteutusvaiheessa käytetään enemmän miestyötunteja kuin yksin ohjelmoidessa.\cite{costandbenefit2} Paraneeko ohjelmakoodin laatu niin paljon, että ylläpitovaiheessa tarvittavilla miestyötunneilla saadaan yhteensä tarvittavat miestyötunnit pienemmäksi pariohjelmoidessa kuin yksilöinä ohjelmoidessa.\newline
-Yksilö miestyötunnit = Yksilö toteutusvaiheen miestyötunnit + Yksilö ylläpitovaiheen miestyötunnit\newline
-Pariohjelmoinnin miestyötunnit = Pariohjelmmoinnin toteutusvaiheen miestyötunnit + Pariohjelmoinnin ylläpitovaiheen miestyötunnit\newline
-Onko Pariohjelmoinnin miestyötunnit < Yksilö miestyötunnit
+Pariohjelmoinnissa toteutusvaiheessa käytetään enemmän miestyötunteja kuin yksin ohjelmoidessa\cite{costandbenefit2}. Paraneeko ohjelmakoodin laatu niin paljon, että ylläpitovaiheessa tarvittavilla miestyötunneilla saadaan yhteensä tarvittavat miestyötunnit pienemmäksi pariohjelmoidessa kuin yksilöinä ohjelmoidessa.\newline\newline
+X_{total} = Yksilö ohjelmoinnin miestyötunnit \newline
+X_{impl} = Yksilö ohjelmoinnin toteutusvaiheen miestyötunnit \newline
+X_{maint} = Yksilö ohjelmoinnin ylläpitovaiheen miestyötunnit\newline
+Y_{total} = Pariohjelmoinnin miestyötunnit\newline
+Y_{impl} = Pariohjelmmoinnin toteutusvaiheen miestyötunnit \newline
+Y_{maint} = Pariohjelmoinnin ylläpitovaiheen miestyötunnit\newline
+X_{total} = X_{impl} + X_{maint} \newline
+Y_{total} = Y_{impl} + Y_{maint} \newline
+\Rightarrow Y_{total} < X_{total} \newline
+
+Onko pariohjelmoinnin miestyötunnit pienemmät kuin yksilö ohjelmoinnin miestyötunnit. Tässä tutkielmassa tarkastellaan tätä kysymystä pohjautuen jo olemassa oleviin tutkimuksiin.
 \section{Menetelmä}
 \section{Case}
 \begin{center}
@@ -151,7 +167,7 @@ Oliko tot2 < tot1
 %
 % instead.
 
-\bibliographystyle{babplain-lf}
+\bibliographystyle{babalpha}
 \bibliography{references-fi}
 
 
