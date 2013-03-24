@@ -77,11 +77,11 @@
 \author{Ville Knuuttila}
 \date{\today}
 \level{Kandidaatintutkielma}
-\abstract{Tutkielmassa tutustutaan pariohjelmoinnin taloudellisiin hyötyihin yritysmaailmassa. Tärkeimpiä mittareita ovat koodin laatu ja koodin kirjoituksen tehokkuus}
+\abstract{Tutkielmassa tutustutaan pariohjelmoinnin taloudellisiin hyötyihin. Pariohjelmoinnilla tiedetään olevan positiivinen vaikutus ohjelmakoodin laatun, mutta vie keskimäärin enemmän miestyötunteja, kuin yksin ohjelmoidessa. Onko pariohjelmointi taloudellisesi varteenotettava ohjelmistokehitysmuoto? Selvitämme paraneeko ohjelmakoodin laatu niin paljon että ohjelman ylläpitovaiheessa saadaan koravattua ylimenneet miestyötunnit toteutusvaiheesta.}
 
 % The following can be used to specify keywords and classification of the paper:
 
-\keywords{avainsana 1, avainsana 2, avainsana 3}
+\keywords{pariohjelmointi, taloudellisuus}
 \classification{} % classification according to ACM Computing Classification System (http://www.acm.org/about/class/)
                   % This is probably mostly relevant for computer scientists
 
@@ -121,13 +121,17 @@
 \section{Johdanto}
 Pariohjelmointi on ohjelmointimenetelmä, jossa kaksi ohjelmoijaa istuvat saman koneen ääressä ohjelmoimassa.\cite{pairprogramming2} Pariohjelmoinnissa ohjelmoijilla on kaksi eri roolia: kontrolloija ja tarkkailija. Kontrolloija on henkilö, joka kirjoittaa ohjelmakoodia, eli käyttää näppäimistöä ja hiirtä samalla, kun tarkkailija istuu vierestä ja etsii virheitä koodista. Tarkkailijan tulisi istua kontrolloijan vieressä ja nähdä monitori kokonaan. 
 \newline
-Pariohjelmointi on hyvä tapa parantaa ongelmanratkaisukykyä ja ohjelmakoodin laatua\cite{pairprogramming}. Tämän tutkielman tavoitteena on tarkastella pariohjelmoinnin taloudellista kannattavuutta.
-Mitä on väärin~\cite{meta}
+Pariohjelmoinnilla on todettu olevan ohjelmakoodin laatuun ja parien ongelmanratkaisukykyyn positiivisia vaikutteita \cite{pairprogramming}. Ongelmat ratkeavat jopa 60\% siitä ajasta mitä yksin ohjelmoivat henkilöt käyttävät saman ongelman ratkaisuun \cite{meta}.
+\newline
+Pariohjelmoijat kumminkin käyttävät keskimäärin 120\% - 150\% enemmän miestyötunteja ongelman tai tehtävän ratkaisuun kuin yksin ohjelmoivat henkilöt \cite{williams01support}. Tämä tarkoittaa sitä, että kaupallisenohjelman ohjelmointi tulee maksamaan työnantajalle ohjelman toteutusvaiheessa jopa 1,5 kertaa enemmän, jos ohjelma ohjelmoidaan käyttäen pariohjelmointia. Ohjelmankoodin hyvä laatu kumminkin helpottaa ohjelman ylläpitoa ja jatkokehitystä \cite{pearse95maintainability}. Näin ollen ylläpitovaiheeseen tarvittavat tunnit pienenevät. Tämän tutkielman tavoitteena on tarkastella pariohjelmoinnin taloudellista kannattavuutta.
+\cite{williams00str}
 
 \section{Pariohjelmointi}
 \subsection{Historia}
 Pariohjelmointia on harrastettu pidempään kuin sitä on edes kutsuttu pariohjelmoinniksi.\cite{williams03pair} Varhaisimpia viittauksia pariohjelmointiin löytyy vuosilta 1953-1956 \cite{williams96pair}.
 Pariohjelmointi kumminkin nousi vasta 1990-luvun lopulla pinnalle, kun se listatiin yhtenä XP-ohjelmistokehityksen kahdestatoista käytänteestä \cite{beck00extreme}.
+\subsection{Käytäntö}
+Pariohjelmoinnin määrittelyn mukaan pariohjelmointi on sitä, kun kaksi ohjelmoijaa työstävät samaa tehtävää tai ongelmaa yhdellä tietokoneella \cite{nawrocki01exp}. Käytännössä eri variaatioita on kumminkin useampia. Suurimmat muutokset saadaan yhdistämällä eri taitotason henkilöitä keskenään.  
 
 
 \section{Kysymys}
@@ -157,6 +161,7 @@ Onko pariohjelmoinnin miestyötunnit pienemmät kuin yksilö ohjelmoinnin miesty
 \section{Tulokset}
 Oliko tot2 < tot1
 
+
 % --- Back matter ---
 %
 % bibtex is used to generate the bibliography. The babplain style
@@ -167,7 +172,7 @@ Oliko tot2 < tot1
 %
 % instead.
 
-\bibliographystyle{babalpha}
+\bibliographystyle{babalpha-lf}
 \bibliography{references-fi}
 
 
