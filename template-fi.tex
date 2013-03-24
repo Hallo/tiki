@@ -119,28 +119,32 @@
 % --- Main matter ---
 
 \section{Johdanto}
-Pariohjelmointi on ohjelmointimenetelmä, jossa kaksi ohjelmoijaa istuvat saman koneen ääressä ohjelmoimassa.\cite{pairprogramming2} Pariohjelmoinnissa ohjelmoijilla on kaksi eri roolia: kontrolloija ja tarkkailija. Kontrolloija on henkilö, joka kirjoittaa ohjelmakoodia eli käyttää näppäimistöä ja hiirtä. Tarkkailija istuu kontrolloijan vieressä nähden monitori kokonaan ja etsii virheitä koodista. 
+Pariohjelmointi on ohjelmointimenetelmä, jossa kaksi ohjelmoijaa istuvat saman koneen ääressä ohjelmoimassa.\cite{pairprogramming2} Pariohjelmoinnissa ohjelmoijilla on kaksi eri roolia: kontrolloija ja tarkkailija. Kontrolloija on henkilö, joka kirjoittaa ohjelmakoodia eli käyttää näppäimistöä ja hiirtä. Tarkkailija istuu kontrolloijan vieressä nähden monitorin kokonaan ja etsii virheitä koodista. 
 
 
-Pariohjelmoinnilla on todettu olevan ohjelmakoodin laatuun ja parien ongelmanratkaisukykyyn positiivisia vaikutuksia \cite{pairprogramming}. Ongelmat ratkeavat jopa 60 prosentissa siitä ajasta, mitä yksin ohjelmoivat henkilöt käyttävät saman ongelman ratkaisuun \cite{meta}. Virheiden määrä ohjelmissa myös pienenee jopa neljäsosan \cite{williams00str}.
+Pariohjelmoinnilla on todettu olevan ohjelmakoodin laatuun ja parien ongelmanratkaisukykyyn positiivisia vaikutuksia \cite{pairprogramming}. Ongelmat ratkeavat jopa 60 prosentissa siitä ajasta, mitä yksin ohjelmoivat henkilöt käyttävät saman ongelman ratkaisuun \cite{meta}. Virheiden määrä ohjelmissa myös pienenee jopa neljäsosan \cite{williams00str}. Näiden lisäksi pariohjelmoidessa ohjelmoijalla on suurempi kynnys käydä tarkistamassa omaa henkilökohtaista sähköpostiaan tai käydä lukemassa aiheeseen liittymättömiä verkkosivuja. \cite{williams03pair} Ohjelmoijat kuitenkin arvostavat toistensa aikaa, eivätkä halua tuhlata sitä omilla henkilökohtaisilla asioillaan. Näin ollen myös keskittyminen pysyy paremmin ongelmanratkaisussa tai tehtävän toteuttamisessa.
 
 
-Pariohjelmoijat kuitenkin käyttävät keskimäärin 120-150 \% enemmän miestyötunteja ongelman tai tehtävän ratkaisuun kuin yksin ohjelmoivat henkilöt \cite{williams01support}. Tämä tarkoittaa sitä, että kaupallisenohjelman ohjelmointi tulee maksamaan työnantajalle ohjelman toteutusvaiheessa jopa 1,5 kertaa enemmän, jos ohjelma ohjelmoidaan käyttäen pariohjelmointia. Ohjelmankoodin hyvä laatu kumminkin helpottaa ohjelman ylläpitoa ja jatkokehitystä \cite{pearse95maintainability}. Näin ollen ylläpitovaiheeseen tarvittavat tunnit pienenevät. Tämän tutkielman tavoitteena on tarkastella pariohjelmoinnin taloudellista kannattavuutta.
+Pariohjelmoijat kuitenkin käyttävät keskimäärin 120-150 \% enemmän miestyötunteja ongelman tai tehtävän ratkaisuun kuin yksin ohjelmoivat henkilöt \cite{williams01support}. Tämä tarkoittaa sitä, että esimerkiksi kaupallisen ohjelman ohjelmointi tulee maksamaan työnantajalle ohjelman toteutusvaiheessa jopa 1,5 kertaa enemmän, jos ohjelma ohjelmoidaan käyttäen pariohjelmointia. Ohjelmankoodin hyvä laatu helpottaa ohjelman ylläpitoa ja jatkokehitystä \cite{pearse95maintainability}. Näin ollen ylläpitovaiheeseen tarvittavat tunnit pienenevät. Tämän tutkielman tavoitteena on tarkastella pariohjelmoinnin taloudellista kannattavuutta miestyötunneissa mitattuna.
 
+\newpage
+Taloudellisuus on nyky-yhteiskunnassa merkittävä tekijä. Jos pariohjelmointi voidaan todeta taloudellisesti kannattavaksi, voitaisiin se ottaa laajemmin käyttöön myös yritysmaailmassa. Tällöin voisimme tulevaisuudessa nauttia laadukkaammasta ja virheettömämmästä ohjelmakoodista.
 
 \section{Pariohjelmointi}
 \subsection{Historia}
-Pariohjelmointia on harrastettu pidempään kuin sitä on edes kutsuttu pariohjelmoinniksi.\cite{williams03pair} Varhaisimpia viittauksia pariohjelmointiin löytyy vuosilta 1953-1956 \cite{williams96pair}.
-Pariohjelmointi kumminkin nousi vasta 1990-luvun lopulla pinnalle, kun se listatiin yhtenä XP-ohjelmistokehityksen kahdestatoista käytänteestä \cite{beck00extreme}.
+Pariohjelmointia on harrastettu pidempään kuin sitä on edes kutsuttu pariohjelmoinniksi.\cite{williams03pair} Varhaisimpia viittauksia pariohjelmointiin löytyy vuosilta 1953-1956 \cite{williams96pair}. 1980-luvulla tutkittiin, että yritysmaailmassa ohjelmoijat käyttävät suurimman osan ajastaan tehden töitä muiden ihmisten kanssa. \cite{lister87peopleware} Vain 20 prosenttia työajasta käytetään yksilöohjelmointiin, 50 prosenttia käytetään parin kanssa ja 30 prosenttia kahden tai useamman henkilön kanssa työn tekemiseen.
+
+
+1990-luvun puolivälissä maailmalla ruvettiin olemaan yhä enenevissä määrin kiinnostuneita ketteristä ohjelmistotuotantomenetelmistä \cite{martin2003agile}. Pariohjelmointikin nousi sen seurauksena pinnalle, kun se listatiin yhtenä XP-ohjelmistokehityksen kahdestatoista käytänteestä \cite{beck00extreme}.
 \subsection{Käytäntö}
-Pariohjelmoinnin määrittelyn mukaan pariohjelmointi on sitä, kun kaksi ohjelmoijaa työstävät samaa tehtävää tai ongelmaa yhdellä tietokoneella \cite{nawrocki01exp}. Käytännössä eri variaatioita on kumminkin useampia. Suurimmat muutokset saadaan yhdistämällä eri taitotason henkilöitä keskenään.  
+Pariohjelmoinnin määrittelyn mukaan pariohjelmointi on sitä, kun kaksi ohjelmoijaa työstävät samaa tehtävää tai ongelmaa yhdellä tietokoneella \cite{nawrocki01exp}. Käytännössä eri variaatioita on kumminkin useampia.
 
 
 \section{Kysymys}
 Pariohjelmoinnissa toteutusvaiheessa käytetään enemmän miestyötunteja kuin yksin ohjelmoidessa\cite{costandbenefit2}. Tässä tutkielmassa tarkastelen, paraneeko ohjelmakoodin laatu niin paljon, että ylläpitovaiheessa tarvittavilla miestyötunneilla saadaan yhteensä tarvittavat miestyötunnit pienemmäksi pariohjelmoidessa kuin yksilöinä ohjelmoidessa. Tarkastelu pohjautuu jo olemassa oleviin tutkimuksiin.\newline\newline
-$X_{total} = Yksilö ohjelmoinnin miestyötunnit \newline
-X_{impl} = Yksilö ohjelmoinnin toteutusvaiheen miestyötunnit \newline
-X_{maint} = Yksilö ohjelmoinnin ylläpitovaiheen miestyötunnit\newline
+$X_{total} = Yksilöohjelmoinnin miestyötunnit \newline
+X_{impl} = Yksilöohjelmoinnin toteutusvaiheen miestyötunnit \newline
+X_{maint} = Yksilöohjelmoinnin ylläpitovaiheen miestyötunnit\newline
 Y_{total} = Pariohjelmoinnin miestyötunnit\newline
 Y_{impl} = Pariohjelmmoinnin toteutusvaiheen miestyötunnit \newline
 Y_{maint} = Pariohjelmoinnin ylläpitovaiheen miestyötunnit\newline
@@ -148,7 +152,7 @@ X_{total} = X_{impl} + X_{maint} \newline
 Y_{total} = Y_{impl} + Y_{maint} \newline
 \Rightarrow Y_{total} < X_{total}$ \newline
 
-Onko pariohjelmoinnin miestyötunnit pienemmät kuin yksilö ohjelmoinnin miestyötunnit.
+Onko pariohjelmoinnin miestyötunnit pienemmät kuin yksilöohjelmoinnin miestyötunnit.
 \section{Menetelmä}
 \section{Case}
 \begin{center}
