@@ -119,11 +119,13 @@
 % --- Main matter ---
 
 \section{Johdanto}
-Pariohjelmointi on ohjelmointimenetelmä, jossa kaksi ohjelmoijaa istuvat saman koneen ääressä ohjelmoimassa.\cite{pairprogramming2} Pariohjelmoinnissa ohjelmoijilla on kaksi eri roolia: kontrolloija ja tarkkailija. Kontrolloija on henkilö, joka kirjoittaa ohjelmakoodia, eli käyttää näppäimistöä ja hiirtä samalla, kun tarkkailija istuu vierestä ja etsii virheitä koodista. Tarkkailijan tulisi istua kontrolloijan vieressä ja nähdä monitori kokonaan. 
-\newline
-Pariohjelmoinnilla on todettu olevan ohjelmakoodin laatuun ja parien ongelmanratkaisukykyyn positiivisia vaikutteita \cite{pairprogramming}. Ongelmat ratkeavat jopa 60\% siitä ajasta mitä yksin ohjelmoivat henkilöt käyttävät saman ongelman ratkaisuun \cite{meta}. Virheiden määrä ohjelmissa myös pienenee jopa 25\% \cite{williams00str}.
-\newline
-Pariohjelmoijat kumminkin käyttävät keskimäärin 120\% - 150\% enemmän miestyötunteja ongelman tai tehtävän ratkaisuun kuin yksin ohjelmoivat henkilöt \cite{williams01support}. Tämä tarkoittaa sitä, että kaupallisenohjelman ohjelmointi tulee maksamaan työnantajalle ohjelman toteutusvaiheessa jopa 1,5 kertaa enemmän, jos ohjelma ohjelmoidaan käyttäen pariohjelmointia. Ohjelmankoodin hyvä laatu kumminkin helpottaa ohjelman ylläpitoa ja jatkokehitystä \cite{pearse95maintainability}. Näin ollen ylläpitovaiheeseen tarvittavat tunnit pienenevät. Tämän tutkielman tavoitteena on tarkastella pariohjelmoinnin taloudellista kannattavuutta.
+Pariohjelmointi on ohjelmointimenetelmä, jossa kaksi ohjelmoijaa istuvat saman koneen ääressä ohjelmoimassa.\cite{pairprogramming2} Pariohjelmoinnissa ohjelmoijilla on kaksi eri roolia: kontrolloija ja tarkkailija. Kontrolloija on henkilö, joka kirjoittaa ohjelmakoodia eli käyttää näppäimistöä ja hiirtä. Tarkkailija istuu kontrolloijan vieressä nähden monitori kokonaan ja etsii virheitä koodista. 
+
+
+Pariohjelmoinnilla on todettu olevan ohjelmakoodin laatuun ja parien ongelmanratkaisukykyyn positiivisia vaikutuksia \cite{pairprogramming}. Ongelmat ratkeavat jopa 60 prosentissa siitä ajasta, mitä yksin ohjelmoivat henkilöt käyttävät saman ongelman ratkaisuun \cite{meta}. Virheiden määrä ohjelmissa myös pienenee jopa neljäsosan \cite{williams00str}.
+
+
+Pariohjelmoijat kuitenkin käyttävät keskimäärin 120-150 \% enemmän miestyötunteja ongelman tai tehtävän ratkaisuun kuin yksin ohjelmoivat henkilöt \cite{williams01support}. Tämä tarkoittaa sitä, että kaupallisenohjelman ohjelmointi tulee maksamaan työnantajalle ohjelman toteutusvaiheessa jopa 1,5 kertaa enemmän, jos ohjelma ohjelmoidaan käyttäen pariohjelmointia. Ohjelmankoodin hyvä laatu kumminkin helpottaa ohjelman ylläpitoa ja jatkokehitystä \cite{pearse95maintainability}. Näin ollen ylläpitovaiheeseen tarvittavat tunnit pienenevät. Tämän tutkielman tavoitteena on tarkastella pariohjelmoinnin taloudellista kannattavuutta.
 
 
 \section{Pariohjelmointi}
@@ -153,8 +155,8 @@ Onko pariohjelmoinnin miestyötunnit pienemmät kuin yksilö ohjelmoinnin miesty
     \begin{tabular}{ | l | l | l | l | l | p{4cm} |}
     \hline
     Tutkimus & Impl mh & Main mh & Koodikanta & context & tavat \\ \hline
-    	\cite{case} & x\% & y\% & 50k & organization wide & pro pro vaikea ongelma \\ \hline
-	\cite{costandbenefit} & 1,4\% & 0,7\% & 0 & - & keskimäärin \\ \hline
+    	\cite{case} & x \% & y \% & 50k & organization wide & pro pro vaikea ongelma \\ \hline
+	\cite{costandbenefit} & 1,4 \% & 0,7 \% & 0 & - & keskimäärin \\ \hline
     \end{tabular}
 \end{center}
 
