@@ -127,43 +127,61 @@ Pariohjelmoinnilla on todettu olevan ohjelmakoodin laatuun ja parien ongelmanrat
 
 Taloudellisuus on nyky-yhteiskunnassa merkittävä tekijä. Jos pariohjelmointi voidaan todeta taloudellisesti kannattavaksi, voitaisiin se ottaa laajemmin käyttöön myös yritysmaailmassa. Tällöin voisimme tulevaisuudessa nauttia laadukkaammasta ja virheettömämmästä ohjelmakoodista.
 
+Toisaalta jos pariohjelmointi ei ole taloudellisesti kannattavaa, niin voitaisiin sen käyttöä entisestään vähentää. Pariohjelmointia voitaisiin käyttää vain sillioin kun siitä on hyötyä muuten, esim. jos ongelma on todella haastava, tai yrityksellä on uusi työntekijä joka pitäisi totuttaa uuten ohjelmakoodikantaan.
+
 Pariohjelmoijat kuitenkin käyttävät keskimäärin 120-150 \% enemmän henkilötyötunteja ongelman tai tehtävän ratkaisuun kuin yksin ohjelmoivat henkilöt~\cite{williams01support}. Tämä tarkoittaa sitä, että esimerkiksi kaupallisen ohjelman ohjelmointi tulee maksamaan työnantajalle ohjelman toteutusvaiheessa jopa 1,5 kertaa enemmän, jos ohjelma ohjelmoidaan käyttäen pariohjelmointia. Ohjelmankoodin hyvä laatu helpottaa ohjelman ylläpitoa ja jatkokehitystä~\cite{pearse95maintainability}. Näin ollen ylläpitovaiheeseen tarvittavat tunnit pienenevät. Tämän tutkielman tavoitteena on tarkastella pariohjelmoinnin taloudellista kannattavuutta henkilötyötunneissa mitattuna.
 
 \section{Pariohjelmointi}
 
 Pariohjelmoinnin määrittelyn mukaan pariohjelmointi on sitä, kun kaksi ohjelmoijaa työstävät samaa tehtävää tai ongelmaa yhdellä tietokoneella~\cite{nawrocki01exp}. Tässä kappaleessa käsittelemme pariohjelmoinnin historiaa ja sen parivariaatioita ohjelmoijien kokemuksen perusteella.
 
-\subsection{Historia}
+\subsection{Pariohjelmoinnin historia}
 
-Pariohjelmointia on harrastettu pidempään kuin sitä on edes kutsuttu pariohjelmoinniksi~\cite{williams03pair}. Varhaisimpia viittauksia pariohjelmointiin löytyy vuosilta 1953-1956~\cite{williams96pair}. 1980-luvulla tutkittiin, että yritysmaailmassa ohjelmoijat käyttävät suurimman osan ajastaan tehden töitä muiden ihmisten kanssa~\cite{lister87peopleware}. Vain 20 prosenttia työajasta käytetään yksilöohjelmointiin, 50 prosenttia käytetään parin kanssa ja 30 prosenttia kahden tai useamman henkilön kanssa työn tekemiseen.
+Pariohjelmointia on harrastettu pidempään kuin sitä on edes kutsuttu pariohjelmoinniksi~\cite{williams03pair}. Varhaisimpia viittauksia pariohjelmointiin löytyy vuosilta 1953-1956~\cite{williams96pair}. 1980-luvulla tehdyissä tutkimuksissa havaittiin, että yritysmaailmassa ohjelmoijat käyttävät suurimman osan ajastaan tehden töitä muiden ihmisten kanssa~\cite{lister87peopleware}. Vain 20 prosenttia työajasta käytetään yksilöohjelmointiin, 50 prosenttia käytetään parin kanssa ja 30 prosenttia kahden tai useamman henkilön kanssa työn tekemiseen.
 
 
-1990-luvun puolivälissä maailmalla ruvettiin olemaan yhä enenevissä määrin kiinnostuneita ketteristä ohjelmistotuotantomenetelmistä~\cite{martin2003agile}. Pariohjelmointikin nousi sen seurauksena pinnalle, kun se listatiin yhtenä XP-ohjelmistokehityksen kahdestatoista käytänteestä~\cite{beck00extreme}.
+1990-luvun puolivälissä ohjelmistotuotannossa ruvettiin olemaan yhä enenevissä määrin kiinnostuneita ketteristä ohjelmistotuotantomenetelmistä~\cite{martin2003agile}. Pariohjelmointikin nousi sen seurauksena pinnalle, kun se listatiin yhtenä XP-ohjelmistokehityksen kahdestatoista käytänteestä~\cite{beck00extreme}.
 
-\subsection{Parivariaatiot kokemuksen perusteella}
+\subsection{Pariohjelmoinnin prosessi}
 
 Ohjelmointikokemuksen perusteella parityypit pystytään jakamaan kolmeen eri variaatioon: kokenut-kokenut, kokenut-kokematon ja kokematon-kokematon. Tämän lisäksi pariohjelmoinnille tyyppilisenä piirteenä on roolien, kontrolloija ja tarkkailija, vaihtaminen tietyin väliajoin~\cite{williams02support}.
 
-
 Ohjelmoinnin opetukseen ja kodikantaan tutustumiseen hyödyllisin variaatio on, että kontroillajana toimii kokenut ohjelmoija~\cite{chong2007social}. Tällöin pelkästään kirjoittamalla ohjelmakoodia kontrolloija kykenee opettamaan kokemattomammalle tarkkailijalle hyviä käytänteitä ja koodikannan sisältöä. Erityisen tärkeää on kiinnittää huomiota siihen, että vuorovaikutus pysyy molempi suuntaisena. Tarkkailijan pitää kyetä kertomaan omat mielipiteensä kokeneemalle kontrolloijalle.
-
 
 Nopeimman ongelmaratkaisukyvyn saavuttaa, jos sekä kontrolloija että tarkkailija ovat molemmat kokeneita koodaajia~\cite{voas2001faster}. Jos ongelma on haastava, ohjelmakoodin laatu paranee entisestään,  mutta vaatii henkisesti suuremman ponnistuksen. Todella yksinkertaisiin tehtäviin voi kuitenkin mennä enemmän aikaa kuin yksin ohjelmoidessa.
 
 Uusille ohjelmoijille hyvä tapa opettaa luettavan koodin kirjoittamista, on pistää sekä tarkkailijaksi että kontrolloijaksi aloitteleva ohjelmoija~\cite{chong2007social}. Tämä pakoittaa kontrolloijan kirjoittamaan ohjelmakoodinsa sellaiseksi että tarkkailija saa siitä selvää.
 
+\begin{center}
+    \begin{tabular}{ | p{4,5cm} | p{5cm} | p{4cm} | }
+    \hline
+   	Parivariaatio & Hyödyt & Haitat \\ \hline
+    	Kokenut - Kokenut & Nopea ongelmanratkaisu & Yksinkertaiset ongelmat saattavat viedä huomattavasti enemmän aikaa\\ \hline
+	Kokenut - Kokematon & Opetustarkoitus ja uuteen ohjelmakoodikantaan tutustuttaminen & Vuorovaikutus vaikeaa, ja siihen pitää kiinnittää paljon huomiota\\ \hline
+	Kokematon - Kokematon & Opettaa kirjoittamaan luettavaa koodia & Ongelman ratkaisu kestää kauan \\ \hline
+    \end{tabular}
+\end{center}
+
+
+\subsection{Pariohjelmoinnin hyödyt ja haitat}
+
+Pariohjelmoidessa kaksi ihmistä istuvat saman tietokoneen ääressä tekemässä samaa tehtävää, tai toisin sanoen kaksi ihmistä tekevät yhden ihmisen työt. Tämä herättää kysymyksen, mitkä ovat pariohjelmoinnin hyödyt ja haitat todellisuudessa. Pariohjelmoinnilla on pakko olla niitä  ~\cite{costandbenefit}, tai sitä ei muuten harjoitettaisi, eikä Kent Beck olisi varmasti nimennyt sitä XP-ohjelmistokehityksen yhdeksi käytänteeksi.
+
+Mitkä ovat sitten pariohjelmoinnin tunnetuimmat haitat. Yleensä ottaen johtotason henkilöt näkevät ohjelmoijat harvana resurssina ~\cite{costandbenefit2} eivätkä halua hukata näitä resursseja keskittämällä useampaa ohjelmoijaa tekemään samaa osaa ohjelmakoodista. Ohjelmointia ollaan myös yleensä opetettu yksinäisen aktiviteettina, josta johtuu monen kokeneen ohjelmoijan haluttomuus ohjelmoida muiden ihmisten kanssa. Osa jopa pitää omaa ohjelmakoodiaan niin persoonallisena, että toinen ihminen vain hidastaisi heitä.
+
+
 \section{Kysymys}
 
 Pariohjelmoinnissa toteutusvaiheessa käytetään enemmän henkilötyötunteja kuin yksin ohjelmoidessa~\cite{costandbenefit2}. Tässä tutkielmassa tarkastelen, paraneeko ohjelmakoodin laatu niin paljon, että ylläpitovaiheessa tarvittavilla henkilötyötunneilla saadaan yhteensä tarvittavat henkilötyötunnit pienemmäksi pariohjelmoidessa kuin yksilöinä ohjelmoidessa. Tarkastelu pohjautuu jo olemassa oleviin tutkimuksiin.\newline\newline
-$X_{total} = Yksilöohjelmoinnin henkilötyötunnit \newline
-X_{impl} = Yksilöohjelmoinnin toteutusvaiheen henkilötyötunnit \newline
-X_{maint} = Yksilöohjelmoinnin ylläpitovaiheen henkilötyötunnit\newline
-Y_{total} = Pariohjelmoinnin henkilötyötunnit\newline
-Y_{impl} = Pariohjelmmoinnin toteutusvaiheen henkilötyötunnit \newline
-Y_{maint} = Pariohjelmoinnin ylläpitovaiheen henkilötyötunnit\newline
-X_{total} = X_{impl} + X_{maint} \newline
-Y_{total} = Y_{impl} + Y_{maint} \newline
-\Rightarrow Y_{total} < X_{total}$ \newline
+$X_{total} = Yksilöohjelmoinnin henkilötyötunnit $\newline
+$X_{impl} = Yksilöohjelmoinnin toteutusvaiheen henkilötyötunnit $\newline
+$X_{maint} = Yksilöohjelmoinnin ylläpitovaiheen henkilötyötunnit $\newline
+$Y_{total} = Pariohjelmoinnin henkilötyötunnit $\newline
+$Y_{impl} = Pariohjelmmoinnin toteutusvaiheen henkilötyötunnit $\newline
+$Y_{maint} = Pariohjelmoinnin ylläpitovaiheen henkilötyötunnit $\newline
+$X_{total} = X_{impl} + X_{maint} $\newline
+$Y_{total} = Y_{impl} + Y_{maint} $\newline
+$\Rightarrow Y_{total} < X_{total}$ \newline
 
 Onko pariohjelmoinnin henkilötyötunnit pienemmät kuin yksilöohjelmoinnin henkilötyötunnit.
 \section{Menetelmä}
