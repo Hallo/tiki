@@ -176,7 +176,11 @@ Ongelmanratkaisu nopeus on yksi tunnetuimmista pariohjelmoinnin hyödyistä ~\ci
 
 \section{Taloudellisuus ohjelmistotuotannossa}
 
-Ohjelmistotuotannossa suurin osa taloudellisista menoista tulee henkilöstöstä~\cite{haikala1995ohjelmistotuotanto}. Tietokoneiden ja muiden tarvittavien laitteiden osuus on huomattavasti pienempi kuin mitä työntekijöiden vaatimat kustannukset. 
+Ohjelmistotuotanto koostuu kahdesta eri vaiheesta: toteutuksesta ja ylläpidosta ~\cite{sommerville1998requirements}. Ohjelmiston kehitys alkaa aina toteutusviheella, joka koostuu neljästä vaiheesta: suunnittelu, toteutus, testaus ja käyttöönotto. Ylläpitovaihe seuraa aina toteutusta, eli kun ohjelma on otettu käyttöön, niin siirrytään ylläpitovaiheeseen. Ylläpito voi olla täysin olematonta, mutta silti käyttöönoton jälkeistä aikaa kutsutaan ylläpitovaiheeksi. Toteutusvaiheeseen voidaan palata ylläpitovaiheesta. Termi jota tästä käytetään on jatkokehitys. Jatkokehitys ei sinäänsä eroa mitenkään muuten toteutuksesta, kuin että ohjelmalle ollaan vähintään kerran suoritettu jo käyttöönotto ja siirrytty ylläpitovaiheeseen.
+
+Ohjelmistotuotannossa suurin osa taloudellisista menoista tulee henkilöstöstä~\cite{haikala1995ohjelmistotuotanto}. Tietokoneiden ja muiden tarvittavien laitteiden osuus kuluista on huomattavasti pienempi kuin mitä työntekijöiden vaatimat kustannukset. Henkilöstökustannukset yleensä koostuvat työntekijöille maksettavasta palkasta, vakuutuksista ja eläkemaksuista.
+
+Suurimpia kustannuksia voidaan siis mitata laskemalla aikaa, joka ohjelmiston kehitykseen menee. Kuinka nopeasti suunnittelu, toteutus, testaus ja käyttöönotto saadaan toteutettua. 
 
 
 \section{Kysymys}
@@ -197,8 +201,7 @@ Onko pariohjelmoinnin henkilötyötunnit pienemmät kuin yksilöohjelmoinnin hen
 
 \section{Case}
 \begin{center}
-    \begin{tabular}{ | l | l | l | l | l | p{4cm} |}
-    \hline
+    \begin{tabular}{ | l | l | l | l | l | p{4cm} |}\hline
     Tutkimus & Impl mh & Main mh & Koodikanta & context & tavat \\ \hline
     	~\cite{case} & x \% & y \% & 50k & organization wide & pro pro vaikea ongelma \\ \hline
 	~\cite{costandbenefit} & 1,4 \% & 0,7 \% & 0 & - & keskimäärin \\ \hline
