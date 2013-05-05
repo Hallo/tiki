@@ -133,7 +133,7 @@ Pariohjelmoijat kuitenkin käyttävät keskimäärin 120-150 \% enemmän henkil�
 
 \section{Pariohjelmointi}
 
-Pariohjelmoinnin määrittelyn mukaan pariohjelmointi on sitä, kun kaksi ohjelmoijaa työstävät samaa tehtävää tai ongelmaa yhdellä tietokoneella~\cite{nawrocki01exp}. Tässä kappaleessa käsittelemme pariohjelmoinnin historiaa ja sen parivariaatioita ohjelmoijien kokemuksen perusteella.
+Pariohjelmoinnin määrittelyn mukaan pariohjelmointi on sitä, kun kaksi ohjelmoijaa työstävät samaa tehtävää tai ongelmaa yhdellä tietokoneella~\cite{nawrocki01exp}. Tässä kappaleessa käsittelemme pariohjelmoinnin historiaa, sen prosessia ja parivariaatioita ohjelmoijien kokemuksen perusteella, sekä pariohjelmoinnin hyötyjä ja haittoja.
 
 \subsection{Pariohjelmoinnin historia}
 
@@ -143,6 +143,8 @@ Pariohjelmointia on harrastettu pidempään kuin sitä on edes kutsuttu pariohje
 1990-luvun puolivälissä ohjelmistotuotannossa ruvettiin olemaan yhä enenevissä määrin kiinnostuneita ketteristä ohjelmistotuotantomenetelmistä~\cite{martin2003agile}. Pariohjelmointikin nousi sen seurauksena pinnalle, kun se listatiin yhtenä XP-ohjelmistokehityksen kahdestatoista käytänteestä~\cite{beck00extreme}.
 
 \subsection{Pariohjelmoinnin prosessi}
+
+Pariohjelmointi prosessina on hyvin yksinkertainen. Siinä toinen parista kirjoittaa ohjelmakoodia ja toinen katselmoi sitä jatkuvasti. Parien olisi syytä vaihtaa rooleja riittävän usein~\cite{beck00extreme}. 
 
 Ohjelmointikokemuksen perusteella parityypit pystytään jakamaan kolmeen eri variaatioon: kokenut-kokenut, kokenut-kokematon ja kokematon-kokematon. Tämän lisäksi pariohjelmoinnille tyyppilisenä piirteenä on roolien, kontrolloija ja tarkkailija, vaihtaminen tietyin väliajoin~\cite{williams02support}.
 
@@ -169,7 +171,12 @@ Pariohjelmoidessa kaksi ihmistä istuvat saman tietokoneen ääressä tekemäss�
 
 Mitkä ovat sitten pariohjelmoinnin tunnetuimmat haitat. Yleensä ottaen johtotason henkilöt näkevät ohjelmoijat harvana resurssina ~\cite{costandbenefit2} eivätkä halua hukata näitä resursseja keskittämällä useampaa ohjelmoijaa tekemään samaa osaa ohjelmakoodista. Ohjelmointia ollaan myös yleensä opetettu yksinäisen aktiviteettina, josta johtuu monen kokeneen ohjelmoijan haluttomuus ohjelmoida muiden ihmisten kanssa. Osa jopa pitää omaa ohjelmakoodiaan niin persoonallisena, että toinen ihminen vain hidastaisi heitä. Tämän lisäksi yksinkertaisiin tehtäviin saattaa mennä melkein yhtäkauan kuin yhdellä ohjelmoijallakin menisi.
 
-Ongelmanratkaisu nopeus on yksi tunnetuimmista pariohjelmoinnin hyödyistä  ~\cite{costandbenefit2}. Mitä kokeneempia ohjelmoijia ja haastavampia ongelmia sitä suuremman hyödyn pariohjelmoinnista voi saada. Tämän lisäksi pariohjelmointia käyttäen tuotettu ratkaisu on ohjelmakoodin rivimäärältä yleensä huomattavasti pienempi, jopa $\frac{8}{10}$ osaa siitä mitä yksinohjelmoidessa tehtynä. Ohjelmakoodin rivimäärän vähäisyys johtaa myös siihen että laatu on yleensäottaen parempaa kuin yksin ohjelmoidessa. Näin ollen pariohjelmoinnilla tuotettujen ohjelmien jatkokehitys ja ylläpito on helpompaa.
+Ongelmanratkaisu nopeus on yksi tunnetuimmista pariohjelmoinnin hyödyistä ~\cite{costandbenefit2}. Mitä kokeneempia ohjelmoijia ja haastavampia ongelmia sitä suuremman hyödyn pariohjelmoinnista voi saada. Tämän lisäksi pariohjelmointia käyttäen tuotettu ratkaisu on ohjelmakoodin rivimäärältä yleensä huomattavasti pienempi, jopa $\frac{8}{10}$ osaa siitä mitä yksinohjelmoidessa tehtynä. Ohjelmakoodin rivimäärän vähäisyys johtaa myös siihen että laatu on yleensäottaen parempaa kuin yksin ohjelmoidessa. Näin ollen pariohjelmoinnilla tuotettujen ohjelmien jatkokehitys ja ylläpito on helpompaa.
+
+
+\section{Taloudellisuus ohjelmistotuotannossa}
+
+Ohjelmistotuotannossa suurin osa taloudellisista menoista tulee henkilöstöstä~\cite{haikala1995ohjelmistotuotanto}. Tietokoneiden ja muiden tarvittavien laitteiden osuus on huomattavasti pienempi kuin mitä työntekijöiden vaatimat kustannukset. 
 
 
 \section{Kysymys}
@@ -186,7 +193,8 @@ $Y_{total} = Y_{impl} + Y_{maint} $\newline
 $\Rightarrow Y_{total} < X_{total}$ \newline
 
 Onko pariohjelmoinnin henkilötyötunnit pienemmät kuin yksilöohjelmoinnin henkilötyötunnit.
-\section{Menetelmä}
+
+
 \section{Case}
 \begin{center}
     \begin{tabular}{ | l | l | l | l | l | p{4cm} |}
