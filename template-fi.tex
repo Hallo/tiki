@@ -122,7 +122,6 @@
 
 Pariohjelmointi on ohjelmointimenetelmä, jossa kaksi ohjelmoijaa istuvat saman koneen ääressä ohjelmoimassa~\cite{pairprogramming2}. Pariohjelmoinnissa ohjelmoijilla on kaksi eri roolia: kontrolloija ja tarkkailija. Kontrolloija on henkilö, joka kirjoittaa ohjelmakoodia eli käyttää näppäimistöä ja hiirtä. Tarkkailija istuu kontrolloijan vieressä nähden monitorin kokonaan ja etsii virheitä koodista. 
 
-
 Pariohjelmoinnilla on todettu olevan ohjelmakoodin laatuun ja parien ongelmanratkaisukykyyn positiivisia vaikutuksia~\cite{pairprogramming}. Ongelmat ratkeavat jopa 60 prosentissa siitä ajasta, mitä yksin ohjelmoivat henkilöt käyttävät saman ongelman ratkaisuun~\cite{meta}. Virheiden määrä ohjelmissa myös pienenee jopa neljäsosan~\cite{williams00str}. Näiden lisäksi pariohjelmoidessa ohjelmoijalla on suurempi kynnys käydä tarkistamassa omaa henkilökohtaista sähköpostiaan tai käydä lukemassa aiheeseen liittymättömiä verkkosivuja~\cite{williams03pair}. Ohjelmoijat kuitenkin arvostavat toistensa aikaa, eivätkä halua tuhlata sitä omilla henkilökohtaisilla asioillaan. Näin ollen myös keskittyminen pysyy paremmin ongelmanratkaisussa tai tehtävän toteuttamisessa.
 
 Taloudellisuus on nyky-yhteiskunnassa merkittävä tekijä. Jos pariohjelmointi voidaan todeta taloudellisesti kannattavaksi, voitaisiin se ottaa laajemmin käyttöön myös yritysmaailmassa. Tällöin voisimme tulevaisuudessa nauttia laadukkaammasta ja virheettömämmästä ohjelmakoodista.
@@ -222,9 +221,39 @@ Pariohjelmoinnin avulla ongelmat ratkeavat nopeammin kuin yksin ohjelmoidessa ~\
 
 Testausvaiheessa voidaan manuaalinen koodikatselmointikin jättää toteuttamatta, koska sitä ollaan toteutettu koko ohjelmakoodin toteutuksen ajan, ja näin siinäkin säästetään henkilötyötunteja~\cite{nawrocki01exp}. Samalla myös pystytään paremmin takaamaan, että ohjelmakoodin laatu on vaadittavalla tasolla. Katselmointi ja siihen vastaaminen on myös nopeampaa~\cite{costandbenefit2}, koska pariohjelmoidessa katselmointia tapahtuu jatkuvasti, eikä palautetta tarvitse odottaa. Virheet voidaan havaita jopa samalla hetkellä kun ne kirjoitetaan, ja tällä voidaan säästää aikaa, joka menisi koodin kääntämisen odottamiseen. Pariohjelmoinnin pakottaessa jatkuvaan koodinkatselmointiin, voidaan pelkästään sillä säästää 10-30\% ohjelman kehityksen vaatimasta ajasta~\cite{gilb1993software}.
 
+Pariohjelmoinnilla on todettu olevan myös muita epäsuoria vaikutuksia ohjelmoijiin ja ohjelmakoodin kirjoittamiseen vaadittavaan aikaan~\cite{case}. Näistä yksi merkittävimmistä on ohjelmoijien viihtyvyyden paraneminen. Tyytyväinen työntekijä on yritykselle paljon arvokkaampi~\cite{airo2008oma} ja saa enemmän aikaan kuin tyytymätön työntekijä. Kun ohjelmoija viihtyy tehtävänsä parissa, ohjelmakoodin kirjoittamiseen vaadittava aika pienenee. Eikä ohjelmoijan keskittyminenkään herpaannu aivan niin helposti kun motivaatiota tehtävän tekemiseen löytyy.
+
 \subsection{Ylläpitovaihe ja jatkokehitys}
 
-\newpage
+Ylläpito ja jatkokehitys ovat vaiheta joita toteutetaan ensimmäisen käyttöönoton jälkeen. Niitä on helpompi toteuttaa mitä luettavampaa ja parempilaatuisempaa ohjelmakoodi on~\cite{costandbenefit2}. Ohjelmakoodiin jääneiden virheiden määrä kasvattaa myös tarvittavaa ylläpidon määrää. Laadukkaampi ohjelmakoodi tarkoittaa siis vähäisempää ylläpitoa.
+
+Ylläpidon suurimmat kustannukset tulevat ohjelmakoodiin jäänneiden virheiden korjaamisesta~\cite{humphrey1994disciplined}. Yksittäisen virheen korjauskustannukset saattavat kasvaa jopa yli 8000\$. Pariohjelmoinnin kasvattaessa koodinlaatua ja vähentämällä jopa 15\% kaikista virheistä~\cite{costandbenefit2} saadaan syntymään huomattavia säästöjä. Jos virhe huomataan ohjelmakoodin tuottajien, tai samassa organisaatiossa työskentelevien kesken, yksittäisen virheen korjaamiseen menee keskimäärin 10 tuntia. Toisaalta jos virhe huomataan ohjelmaa käyttävän asiakkaan toimesta, sen korjaamiseen käytettävä aika moninkertaistuu jopa 88 tuntiin~\cite{humphrey1994disciplined}.
+
+Jatkokehitys on vaihe jossa jo olemassa olevaan ohjelmaan halutaan lisää ominaisuuksia tai parantaa olemassa olevia ominaisuuksia. Pariohjelmoidessa tuotettavat ratkaisut ovat laadultaan parempia, ja rivimäärältään pienempiä kuin yksinohjelmoidessa~\cite{costandbenefit2}. Tämä johtaa siihen, että ohjelmaan on helpompi lisätä uusia ominaisuuksia, koska ohjelmakoodissa valmiina olevia virheitä on vähemmän ja se on luettavampaa.
+
+\section{Tulokset}
+
+Oletetaan, että tehtävänä on toteuttaa ohjelma jonka ohjelmakoodin rivimäärä on 50000 riviä yksinohjelmoidessa. Tämän lisäksi tehdään oletus, että ohjelmakoodia syntyy noin 50 riviä tunnissa. Näin ollen yksilöohjelmointia hyväksikäyttäen ohjelman kirjoittamiseen menisi 1000 tuntia. Pariohjelmointi saattaa tuottaa jopa 120-150\% enemmän henkilötyötunteja, jos otamme tästä keskiarvon eli 135\% saadaan pariohjelmoinnilla kulutettua 1350 tuntia ohjelman kirjoittamiseen.
+
+Ylläpitovaiheessa käytetään suurin osa ajasta virheiden korjaamiseen. Oletamme että virhe on huomattu ohjelman kirjoittaneessa organisaatiossa, joten yksittäisen virheen korjaamiseen menevä aika on noin 10 tuntia. Oletamme myös että ohjelmoijat tekevät jokaista 100 ohjelmakoodiriviä kohden 10 virhettä, näistä virheistä 70\% voidaan karsia käyttämällä hyvää ohjelmistokehitysmenetelmää ja testaamalla ohjelmakoodia~\cite{costandbenefit2}, eli jäljelle jää 1500 virhettä. Eli ohjelman kaikkien virheiden korjaamiseen menee 15000 henkilötyötuntia, jos ohjelma on toteutettu käyttäen yksilöohjelmointia. Pariohjelmointia käyttämällä voidaan välttää jopa 15\% kaikista virheistä joita ohjelmakoodiin on jäänyt, eli jäljelle jää 1275 virhettä, jos ohjelmakoodi on kirjoitettu käyttäen pariohjelmointia. Näin ollen pariohjelmoinnilla tuotetun ohjelmakoodin ylläpito tulisi viemään 12750 henkilötyötuntia.\newline
+$X_{impl} = 1000$\newline
+$X_{maint} = 15000$\newline
+$Y_{impl} = 1350$\newline
+$Y_{maint} =12750$\newline
+$X_{total} = 1000 + 15000 =16000 $\newline
+$Y_{total} = 1350 + 12750 = 14100 $\newline
+$X_{total}-Y_{total} = 1900$\newline
+
+Näin laskemalla voimme todeta, että näillä oletetuilla luvuilla voimme säästää 1900 henkilötyötuntia, jos jokainen virhe ohjelmasta korjataan. Tuolkseksi voimme todeta $ Y_{total} < X_{total}$ pitää paikkansa. Pariohjelmoinnilla toteutetun ohjelman laatu paranee tarpeeksi, että ylläpitoon vaadittavat henkilötyötunnit pienenevät enemmän kuin mitä pariohjelmmoin toteutusvaiheessa tarvitta kasvoivat, verrattuna yksilöohjelmointiin.
+
+\section{Yhteenveto}
+
+Pariohjelmoinnilla on todettu olevan ohjelmakoodin laatuun ja parien ongelmanratkaisukykyyn positiivisia vaikutuksia~\cite{pairprogramming}. Ongelmat ratkeavat jopa 60 prosentissa siitä ajasta, mitä yksin ohjelmoivat henkilöt käyttävät saman ongelman ratkaisuun~\cite{meta}. Virheiden määrä ohjelmissa myös pienenee jopa neljäsosan~\cite{williams00str}. Näiden lisäksi pariohjelmoidessa ohjelmoijalla on suurempi kynnys käydä tarkistamassa omaa henkilökohtaista sähköpostiaan tai käydä lukemassa aiheeseen liittymättömiä verkkosivuja~\cite{williams03pair}. Ohjelmoijat kuitenkin arvostavat toistensa aikaa, eivätkä halua tuhlata sitä omilla henkilökohtaisilla asioillaan. Näin ollen myös keskittyminen pysyy paremmin ongelmanratkaisussa tai tehtävän toteuttamisessa.
+
+Yksinkertaisten tehtävien ratkaiseminen pariohjelmointia hyväksikäyttäen saattaa silti viedä lähes yhtäpaljon aikaa kuin yksin ohjelmoidessa~\cite{meta}. Näin ollen taloudellisesti ei ole kannattavaa käyttää pariohjelmointia tämän tyyppisten ongelmien ratkaisemiseen. Kun yksinkertaisia tehtäviä ratkaistaessa virheidenkin määrät ovat hyvin lähellä tosiaan, kirjoitti ohjelmakoodin pariohjelmointia hyväksi käyttäen tai ei.
+
+Vähänkään haastavampia ongelmia ratkaistaessa pariohjelmointi käyttää enemmän henkilötyötunteja toteutukseen. Ohjelmakoodin laatu, virheettömyys, rivimäärän vähäisempi määrä ja jatkuva katselmointi vähentävät kumminkin muissa vaiheissa tarvittavia henkilötyötunteja sen verran paljon, että pariohjelmointia ei kannata jättää huomioimatta vaihtoehtona taloudellisesta näkökulmasta.
+
 
 % --- Back matter ---
 %
