@@ -201,18 +201,28 @@ $\Rightarrow Y_{total} < X_{total}$ \newline
 Ohjelmistotuotannon suurimmat kustannukset tulevat henkilöstökuluista~\cite{haikala1995ohjelmistotuotanto}, joten jonkun tietyn ohjelmistotuotantomenetelmän taloudellinen kannattavuus on tietyllä tavalla mahdollista laskea tarkastelemalla sen vaativia henkilöstö resursseja. Näistä henkilötyötunnit ovat helpoiten mitattavia yksiköitä. Näin ollen tarkastelemalla: onko pariohjelmoinnin henkilötyötunnit pienemmät kuin yksilöohjelmoinnin henkilötyötunnit, saadaan kuva siitä onko pariohjelmointi taloudellisesti kannattavaa.
 
 
-\section{Case}
-\begin{center}
- \begin{tabular}{ | l | l | l | l | l | p{4cm} |}\hline
- Tutkimus & Impl mh & Main mh & Koodikanta & context & tavat \\ \hline
- 	~\cite{case} & x \% & y \% & 50k & organization wide & pro pro vaikea ongelma \\ \hline
-	~\cite{costandbenefit} & 1,4 \% & 0,7 \% & 0 & - & keskimäärin \\ \hline
- \end{tabular}
-\end{center}
+%\section{Case}
+%\begin{center}
+% \begin{tabular}{ | l | l | l | l | l | p{4cm} |}\hline
+% Tutkimus & Impl mh & Main mh & Koodikanta & context & tavat \\ \hline
+% 	~\cite{case} & x \% & y \% & 50k & organization wide & pro pro vaikea ongelma \\ \hline
+%	~\cite{costandbenefit} & 1,4 \% & 0,7 \% & 0 & - & keskimäärin \\ \hline
+% \end{tabular}
+%\end{center}
 
 \section{Pariohjelmoinnin taloudellisuus}
 
-Toteutusvaiheessa pariohjelmointi saattaa tuottaa jopa 120-150\% henkilötyötunteja verrattuna yksilöohjelmointiin~\cite{williams01support}. Jos on aivan täysin varmaa, että ohjelmaa ei olla ylläpitämässä tai jatkokehittämässä, niin pariohjelmointi ei kannata käyttää taloudelliselta näkökulmalta ohjelman ohjelmakoodia kirjoittamiseen.
+Toteutusvaiheessa pariohjelmointi saattaa tuottaa jopa 120-150\% henkilötyötunteja verrattuna yksilöohjelmointiin~\cite{williams01support}. Jos on aivan täysin varmaa, että ohjelmaa ei olla ylläpitämässä tai jatkokehittämässä, niin pariohjelmointi ei kannata käyttää taloudelliselta näkökulmalta ohjelman ohjelmakoodin kirjoittamiseen. Yleensä tämä ei kumminkaan ole se tapaus miten ohjelmia lähdetään toteuttamaan, vaan etenkin yritymaailmassa ohjelmat ovat tarkoitettu käytettäväksi. Näin ollen pariohjelmoinnin taloudellisuuden tarkastelussa oletamme, että ohjelmaa tullaan ylläpitämään ja mahdollisesti myös jatkokehittämään.
+
+\subsection{Toteutusvaihe}
+
+Toteutusvaiheeseen kuuluu suunnittelu, toteutus, testaus ja käyttöönotto  ~\cite{sommerville1998requirements}. Näistä vaihesta pariohjelmointia voidaan käyttää hyödyksi toteutuksessa ja testauksessa. Suunnittelu ja käyttöönotto toteutetaan yleensä isommissa ryhmissä. Näin ollen niitä ei tulla tarkastelemaan tässä, vaan oletetaan että ne ovat yhtä aikaa vieviä kuin yksinohjelmoidessa.
+
+Pariohjelmoinnin avulla ongelmat ratkeavat nopeammin kuin yksin ohjelmoidessa ~\cite{costandbenefit}. Näin ollen toteutuksen kustannukset eivät ole tuplasti sitä, mitä yksinohjelmoidessa, kuten skeptisimmät epäilijät ovat väittäneet ~\cite{costandbenefit2}. Pariohjelmointi kuluttaa pahimmillaankin vain noin 150\% siitä henkilötuntimäärästä, jota yksinohjelmoivat käyttävät.
+
+Testausvaiheessa voidaan manuaalinen koodikatselmointikin jättää toteuttamatta, koska sitä ollaan toteutettu koko ohjelmakoodin toteutuksen ajan, ja näin siinäkin säästetään henkilötyötunteja~\cite{nawrocki01exp}. Samalla myös pystytään paremmin takaamaan, että ohjelmakoodin laatu on vaadittavalla tasolla. Katselmointi ja siihen vastaaminen on myös nopeampaa~\cite{costandbenefit2}, koska pariohjelmoidessa katselmointia tapahtuu jatkuvasti, eikä palautetta tarvitse odottaa. Virheet voidaan havaita jopa samalla hetkellä kun ne kirjoitetaan, ja tällä voidaan säästää aikaa, joka menisi koodin kääntämisen odottamiseen.
+
+\subsection{Ylläpitovaihe ja jatkokehitys}
 
 \newpage
 
