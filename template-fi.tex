@@ -188,12 +188,12 @@ Luettavampi ja parempilaatuisempi ohjelmakoodi johtaa siihen, että ohjelman jat
 \section{Kysymys}
 
 Pariohjelmoinnissa toteutusvaiheessa käytetään enemmän henkilötyötunteja kuin yksin ohjelmoidessa~\cite{costandbenefit2}. Tässä tutkielmassa tarkastelen, paraneeko ohjelmakoodin laatu niin paljon, että ylläpitovaiheessa tarvittavilla henkilötyötunneilla saadaan yhteensä tarvittavat henkilötyötunnit pienemmäksi pariohjelmoidessa kuin yksilöinä ohjelmoidessa. Tarkastelu pohjautuu jo olemassa oleviin tutkimuksiin.\newline\newline
-$X_{total} = Yksilöohjelmoinnin henkilötyötunnit $\newline
-$X_{impl} = Yksilöohjelmoinnin toteutusvaiheen henkilötyötunnit $\newline
-$X_{maint} = Yksilöohjelmoinnin ylläpitovaiheen henkilötyötunnit $\newline
-$Y_{total} = Pariohjelmoinnin henkilötyötunnit $\newline
-$Y_{impl} = Pariohjelmmoinnin toteutusvaiheen henkilötyötunnit $\newline
-$Y_{maint} = Pariohjelmoinnin ylläpitovaiheen henkilötyötunnit $\newline
+$X_{total} = Yksilöohjelmoinnin\; henkilötyötunnit $\newline
+$X_{impl} = Yksilöohjelmoinnin\; toteutusvaiheen\; henkilötyötunnit $\newline
+$X_{maint} = Yksilöohjelmoinnin\; ylläpitovaiheen\; henkilötyötunnit $\newline
+$Y_{total} = Pariohjelmoinnin\; henkilötyötunnit $\newline
+$Y_{impl} = Pariohjelmmoinnin\; toteutusvaiheen\; henkilötyötunnit $\newline
+$Y_{maint} = Pariohjelmoinnin\; ylläpitovaiheen\; henkilötyötunnit $\newline
 $X_{total} = X_{impl} + X_{maint} $\newline
 $Y_{total} = Y_{impl} + Y_{maint} $\newline
 $\Rightarrow Y_{total} < X_{total}$ \newline
@@ -203,15 +203,16 @@ Ohjelmistotuotannon suurimmat kustannukset tulevat henkilöstökuluista~\cite{ha
 
 \section{Case}
 \begin{center}
-    \begin{tabular}{ | l | l | l | l | l | p{4cm} |}\hline
-    Tutkimus & Impl mh & Main mh & Koodikanta & context & tavat \\ \hline
-    	~\cite{case} & x \% & y \% & 50k & organization wide & pro pro vaikea ongelma \\ \hline
+ \begin{tabular}{ | l | l | l | l | l | p{4cm} |}\hline
+ Tutkimus & Impl mh & Main mh & Koodikanta & context & tavat \\ \hline
+ 	~\cite{case} & x \% & y \% & 50k & organization wide & pro pro vaikea ongelma \\ \hline
 	~\cite{costandbenefit} & 1,4 \% & 0,7 \% & 0 & - & keskimäärin \\ \hline
-    \end{tabular}
+ \end{tabular}
 \end{center}
 
-\section{Tulokset}
-Oliko tot2 < tot1
+\section{Pariohjelmoinnin taloudellisuus}
+
+Toteutusvaiheessa pariohjelmointi saattaa tuottaa jopa 120-150\% henkilötyötunteja verrattuna yksilöohjelmointiin~\cite{williams01support}. Jos on aivan täysin varmaa, että ohjelmaa ei olla ylläpitämässä tai jatkokehittämässä, niin pariohjelmointi ei kannata käyttää taloudelliselta näkökulmalta ohjelman ohjelmakoodia kirjoittamiseen.
 
 \newpage
 
