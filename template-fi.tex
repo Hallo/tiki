@@ -77,13 +77,16 @@
 \author{Ville Knuuttila}
 \date{\today}
 \level{Kandidaatintutkielma}
-\abstract{Pariohjelmoinnilla tiedetään olevan positiivinen vaikutus ohjelmakoodin laatun, mutta vie keskimääräisesti enemmän henkilötyötunteja, kuin yksin ohjelmoidessa. Onko pariohjelmointi taloudellisesti varteenotettava ohjelmistokehitysmuoto? Selvitämme paraneeko ohjelmakoodin laatu niin paljon että ohjelman ylläpitovaiheessa saadaan korvattua ylimenneet henkilötyötunnit toteutusvaiheesta.}
+\abstract{Pariohjelmoinnilla tiedetään olevan positiivinen vaikutus ohjelmakoodin laatun, mutta vie keskimääräisesti enemmän henkilötyötunteja, kuin yksin ohjelmoidessa. Onko pariohjelmointi taloudellisesti varteenotettava ohjelmistokehitysmuoto? Selvitämme jo olemassa olevien tutkimusten pohjalta paraneeko ohjelmakoodin laatu niin paljon että ohjelman ylläpitovaiheessa saadaan korvattua ylimenneet henkilötyötunnit toteutusvaiheesta.
+
+Taloudellisesti ei ole kannattavaa käyttää pariohjelmointia, jos tehtävänä on toteuttaa jokin yksinkertainen ominaisuus. Yksinkertaisissa ongelmissa pariohjelmointi saattaa viedä yhtä paljon aikaa kuin yksinohjelmoidessa ja ohjelmakoodin laadussa ei ole suurta eroa. Toisaalta haastavien ominaisuuksien toteutuksessa kannattaa käyttää pariohjelmointia, jos ohjelmaa on tarkoitus jatkokehittää tai ylläpitää.
+\\\newline ACM Computing Classification System (CCS): \newline \textbf{Software and its engineering $\rightarrow$ Pair programming} \newline \textbf{Social and professional topics $\rightarrow$ Economic impact}}
 
 % The following can be used to specify keywords and classification of the paper:
 
 \keywords{pariohjelmointi, taloudellisuus}
 \classification{} % classification according to ACM Computing Classification System (http://www.acm.org/about/class/)
-                  % This is probably mostly relevant for computer scientists
+% This is probably mostly relevant for computer scientists
 
 % If the automatic page number counting is not working as desired in your case,
 % uncomment the following to manually set the number of pages displayed in the abstract page:
@@ -147,11 +150,11 @@ Pariohjelmointi prosessina on hyvin yksinkertainen. Siinä toinen parista kirjoi
 
 Ohjelmointikokemuksen perusteella parityypit pystytään jakamaan kolmeen eri variaatioon: kokenut-kokenut, kokenut-kokematon ja kokematon-kokematon. Tämän lisäksi pariohjelmoinnille tyyppilisenä piirteenä on roolien, kontrolloija ja tarkkailija, vaihtaminen tietyin väliajoin~\cite{williams02support}.
 
-Ohjelmoinnin opetukseen ja koodikantaan tutustumiseen hyödyllisin variaatio on, että kontroillajana toimii kokenut ohjelmoija~\cite{chong2007social}. Tällöin pelkästään kirjoittamalla ohjelmakoodia kontrolloija kykenee opettamaan kokemattomammalle tarkkailijalle hyviä käytänteitä ja koodikannan sisältöä. Erityisen tärkeää on kiinnittää huomiota siihen, että vuorovaikutus pysyy molempiin suuntiin. Tarkkailijan pitää kyetä kertomaan omat mielipiteensä kokeneemalle kontrolloijalle.
+Ohjelmoinnin opetukseen ja koodikantaan tutustumiseen hyödyllisin variaatio on, että kontroillajana toimii kokenut ohjelmoija~\cite{chong2007social}. Tällöin pelkästään kirjoittamalla ohjelmakoodia kontrolloija kykenee opettamaan kokemattomammalle tarkkailijalle hyviä käytänteitä ja koodikannan sisältöä. Erityisen tärkeää on kiinnittää huomiota siihen, että vuorovaikutus pysyy molempiin suuntiin. Tarkkailijan pitää kyetä kertomaan omat mielipiteensä, havainnot ja kysymykset kokeneemalle kontrolloijalle.
 
 Nopeimman ongelmaratkaisukyvyn saavuttaa, jos sekä kontrolloija että tarkkailija ovat molemmat kokeneita koodaajia~\cite{voas2001faster}. Jos ongelma on haastava, ohjelmakoodin laatu paranee entisestään,  mutta vaatii henkisesti suuremman ponnistuksen. Todella yksinkertaisiin tehtäviin voi kuitenkin mennä enemmän aikaa kuin yksin ohjelmoidessa.
 
-Uusille ohjelmoijille hyvä tapa opettaa luettavan koodin kirjoittamista on pistää sekä tarkkailijaksi että kontrolloijaksi aloitteleva ohjelmoija~\cite{chong2007social}. Tämä pakottaa kontrolloijan kirjoittamaan ohjelmakoodinsa sellaiseksi, että tarkkailija saa siitä selvää. Huonona puolena on, että ongelmanratkaisukyky ei paljoa nopeudu verrattuna yksinohjelmoivaan aloittelijaan.
+Uusille ohjelmoijille hyvä tapa opettaa luettavan koodin kirjoittamista on pakottaa sekä tarkkailijaksi että kontrolloijaksi aloitteleva ohjelmoija~\cite{chong2007social}. Tämä pakottaa kontrolloijan kirjoittamaan ohjelmakoodinsa sellaiseksi, että tarkkailija saa siitä selvää. Huonona puolena on, että ongelmanratkaisukyky ei paljoa nopeudu verrattuna yksinohjelmoivaan aloittelijaan.
 
 \begin{center}
     \begin{tabular}{ | p{4,5cm} | p{5cm} | p{4cm} | }
@@ -168,9 +171,9 @@ Uusille ohjelmoijille hyvä tapa opettaa luettavan koodin kirjoittamista on pist
 
 Pariohjelmoidessa kaksi ihmistä istuvat saman tietokoneen ääressä tekemässä samaa tehtävää, tai toisin sanoen kaksi ihmistä tekevät yhden ihmisen työt. Tämä herättää kysymyksen, mitkä ovat pariohjelmoinnin hyödyt ja haitat todellisuudessa. Pariohjelmoinnilla on pakko olla hyötyjä  ~\cite{costandbenefit}, tai sitä ei muuten harjoitettaisi, eikä Kent Beck olisi varmasti nimennyt sitä XP-ohjelmistokehityksen yhdeksi käytänteeksi.
 
-Mitkä ovat sitten pariohjelmoinnin tunnetuimmat haitat. Yleensä ottaen johtotason henkilöt näkevät ohjelmoijat harvana resurssina ~\cite{costandbenefit2} eivätkä halua hukata näitä resursseja keskittämällä useampaa ohjelmoijaa tekemään samaa osaa ohjelmakoodista. Ohjelmointia ollaan myös yleensä opetettu yksinäisen aktiviteettina, josta johtuu monen kokeneen ohjelmoijan haluttomuus ohjelmoida muiden ihmisten kanssa. Osa jopa pitää omaa ohjelmakoodiaan niin persoonallisena, että toinen ihminen vain hidastaisi heitä. Tämän lisäksi yksinkertaisiin tehtäviin saattaa mennä melkein yhtäkauan kuin yhdellä ohjelmoijallakin menisi.
+Mitkä ovat sitten pariohjelmoinnin tunnetuimmat haitat? Yleensä ottaen johtotason henkilöt näkevät ohjelmoijat harvana resurssina ~\cite{costandbenefit2} eivätkä halua hukata näitä resursseja keskittämällä useampaa ohjelmoijaa tekemään samaa osaa ohjelmakoodista. Ohjelmointia ollaan myös yleensä opetettu yksinäisen aktiviteettina, josta johtuu monen kokeneen ohjelmoijan haluttomuus ohjelmoida muiden ihmisten kanssa. Osa jopa pitää omaa ohjelmakoodiaan niin persoonallisena, että toinen ihminen vain hidastaisi heitä. Tämän lisäksi yksinkertaisiin tehtäviin saattaa mennä melkein yhtäkauan kuin yhdellä ohjelmoijallakin menisi.
 
-Ongelmanratkaisunopeus on yksi tunnetuimmista pariohjelmoinnin hyödyistä ~\cite{costandbenefit2}. Mitä kokeneempia ohjelmoijia ja haastavampia ongelmia, sitä suuremman hyödyn pariohjelmoinnista voi saada. Tämän lisäksi pariohjelmointia käyttäen tuotettu ratkaisu on ohjelmakoodin rivimäärältä yleensä huomattavasti pienempi, jopa $\frac{4}{5}$ siitä mitä yksinohjelmoidessa tehtynä. Ohjelmakoodin rivimäärän vähäisyys johtaa myös siihen että laatu on usein parempaa kuin yksin ohjelmoidessa. Näin ollen pariohjelmoinnilla tuotettujen ohjelmien jatkokehitys ja ylläpito on helpompaa.
+Ongelmanratkaisunopeus on yksi tunnetuimmista pariohjelmoinnin hyödyistä ~\cite{costandbenefit2}. Mitä kokeneempia ohjelmoijia ja haastavampia ongelmia, sitä suuremman hyödyn pariohjelmoinnista voi saada. Tämän lisäksi pariohjelmointia käyttäen tuotettu ratkaisu on ohjelmakoodin rivimäärältä yleensä huomattavasti pienempi, jopa neljä viidesosaa siitä mitä yksinohjelmoidessa tehtynä. Ohjelmakoodin rivimäärän vähäisyys johtaa myös siihen että laatu on usein parempaa kuin yksin ohjelmoidessa. Näin ollen pariohjelmoinnilla tuotettujen ohjelmien jatkokehitys ja ylläpito on helpompaa.
 
 
 \section{Taloudellisuus ohjelmistotuotannossa}
@@ -184,7 +187,7 @@ Suurimpia kustannuksia voidaan siis mitata laskemalla aikaa, joka ohjelmiston to
 Luettava ja hyvälaatuinen ohjelmakoodi johtaa siihen, että ohjelman jatkokehittäminen on helpompaa ~\cite{johnson1994instrumented}. Näin ollen, jos ohjelmaa jatkokehitetään, tulee halvemmaksi, jos alkuperäisen ohjelman ohjelmakoodi on kirjoitettu laadukkaammaksi ~\cite{fagan2001design}. Koodikatselmointi on tapa, jolla koodin laatua pystytään parantamaan ja valvomaan. Katselmoidessa joku toinen ohjelmointitaitoinen henkilö lukee kirjoitetun ohjelmakoodin läpi ja merkitsee ohjelmakoodiin virheet tai huonot käytänteet, jotka varsinainen ohjelmoija sen jälkeen korjaa. Katselmoinnilla voidaan vähentää ohjelman kehityksen vaatimaa aikaa jopa 10-30\%~\cite{gilb1993software}
 
 
-\section{Kysymys}
+\section{Tutkimuskysymys ja tutkimusmenetelmä}
 
 Pariohjelmoinnissa toteutusvaiheessa käytetään enemmän henkilötyötunteja kuin yksin ohjelmoidessa~\cite{costandbenefit2}. Tässä tutkielmassa tarkastelen, paraneeko ohjelmakoodin laatu niin paljon, että ylläpitovaiheessa tarvittavilla henkilötyötunneilla saadaan yhteensä tarvittavat henkilötyötunnit pienemmäksi pariohjelmoidessa kuin yksilöinä ohjelmoidessa. Tarkastelu pohjautuu jo olemassa oleviin tutkimuksiin.\newline\newline
 $X_{total} = Yksilöohjelmoinnin\; henkilötyötunnit $\newline
@@ -197,7 +200,7 @@ $X_{total} = X_{impl} + X_{maint} $\newline
 $Y_{total} = Y_{impl} + Y_{maint} $\newline
 $\Rightarrow Y_{total} < X_{total}$ \newline
 
-Ohjelmistotuotannon suurimmat kustannukset tulevat henkilöstökuluista~\cite{haikala1995ohjelmistotuotanto}, joten jonkun tietyn ohjelmistotuotantomenetelmän taloudellinen kannattavuus on tietyllä tavalla mahdollista laskea tarkastelemalla sen vaativia henkilöstö resursseja. Näistä henkilötyötunnit ovat helpoiten mitattavia yksiköitä. Näin ollen tarkastelemalla: onko pariohjelmoinnin henkilötyötunnit pienemmät kuin yksilöohjelmoinnin henkilötyötunnit, saadaan kuva siitä onko pariohjelmointi taloudellisesti kannattavaa.
+Ohjelmistotuotannon suurimmat kustannukset tulevat henkilöstökuluista~\cite{haikala1995ohjelmistotuotanto}, joten jonkun tietyn ohjelmistotuotantomenetelmän taloudellinen kannattavuus on tietyllä tavalla mahdollista laskea tarkastelemalla sen vaativia henkilöstöresursseja. Näistä henkilötyötunnit ovat helpoiten mitattavia yksiköitä. Näin ollen tarkastelemalla, onko pariohjelmoinnin henkilötyötunnit pienemmät kuin yksilöohjelmoinnin henkilötyötunnit, saadaan kuva siitä onko pariohjelmointi taloudellisesti kannattavaa.
 
 
 %\section{Case}
@@ -211,7 +214,7 @@ Ohjelmistotuotannon suurimmat kustannukset tulevat henkilöstökuluista~\cite{ha
 
 \section{Pariohjelmoinnin taloudellisuus}
 
-Toteutusvaiheessa pariohjelmointi saattaa tuottaa jopa 120-150\% henkilötyötunteja verrattuna yksilöohjelmointiin~\cite{williams01support}. Jos on aivan täysin varmaa, että ohjelmaa ei olla ylläpitämässä tai jatkokehittämässä, niin pariohjelmointia ei kannata käyttää taloudelliselta näkökulmalta ohjelman ohjelmakoodin kirjoittamiseen. Yleensä tämä ei kuitenkaan ole se tapaus, miten ohjelmia lähdetään toteuttamaan, vaan etenkin yritymaailmassa ohjelmat ovat tarkoitettu käytettäväksi. Näin ollen pariohjelmoinnin taloudellisuuden tarkastelussa oletamme, että ohjelmaa tullaan ylläpitämään ja mahdollisesti myös jatkokehittämään.
+Toteutusvaiheessa pariohjelmointi saattaa tuottaa jopa 120-150\% henkilötyötunteja verrattuna yksilöohjelmointiin~\cite{williams01support}. Jos on täysin varmaa, että ohjelmaa ei olla ylläpitämässä tai jatkokehittämässä, niin pariohjelmointia ei kannata käyttää taloudelliselta näkökulmalta ohjelman ohjelmakoodin kirjoittamiseen. Yleensä tämä ei kuitenkaan ole se tapaus, miten ohjelmia lähdetään toteuttamaan, vaan etenkin yritymaailmassa ohjelmat ovat tarkoitettu käytettäväksi. Näin ollen pariohjelmoinnin taloudellisuuden tarkastelussa oletamme, että ohjelmaa tullaan ylläpitämään ja mahdollisesti myös jatkokehittämään.
 
 \subsection{Toteutusvaihe}
 
@@ -227,7 +230,7 @@ Pariohjelmoinnilla on todettu olevan myös muita epäsuoria vaikutuksia ohjelmoi
 
 Ylläpito ja jatkokehitys ovat vaiheta, joita toteutetaan ensimmäisen käyttöönoton jälkeen. Niitä on helpompi toteuttaa mitä luettavampaa ja parempilaatuisempaa ohjelmakoodi on~\cite{costandbenefit2}. Ohjelmakoodiin jääneiden virheiden määrä kasvattaa myös tarvittavaa ylläpidon määrää. Laadukkaampi ohjelmakoodi tarkoittaa siis vähäisempää ylläpitoa.
 
-Ylläpidon suurimmat kustannukset tulevat ohjelmakoodiin jäänneiden virheiden korjaamisesta~\cite{humphrey1994disciplined}. Yksittäisen virheen korjauskustannukset saattavat kasvaa jopa yli 8000\$. Pariohjelmoinnin kasvattaessa koodinlaatua ja vähentämällä jopa 15\% kaikista virheistä~\cite{costandbenefit2} saadaan syntymään huomattavia säästöjä. Jos virhe huomataan ohjelmakoodin tuottajien tai samassa organisaatiossa työskentelevien kesken, yksittäisen virheen korjaamiseen menee keskimäärin 10 tuntia. Toisaalta, jos virhe huomataan ohjelmaa käyttävän asiakkaan toimesta, sen korjaamiseen käytettävä aika moninkertaistuu jopa 88 tuntiin~\cite{humphrey1994disciplined}.
+Ylläpidon suurimmat kustannukset tulevat ohjelmakoodiin jäänneiden virheiden korjaamisesta~\cite{humphrey1994disciplined}. Humphreyn esimerkin mukaan eräässä projektissä yksittäisen virheen korjauskustannukset kasvoivat yli 8000 dollariin. Pariohjelmoinnin kasvattaessa koodinlaatua ja vähentämällä jopa 15\% kaikista virheistä~\cite{costandbenefit2} saadaan syntymään huomattavia säästöjä. Jos virhe huomataan ohjelmakoodin tuottajien tai samassa organisaatiossa työskentelevien kesken, yksittäisen virheen korjaamiseen menee keskimäärin 10 tuntia. Toisaalta, jos virhe huomataan ohjelmaa käyttävän asiakkaan toimesta, sen korjaamiseen käytettävä aika moninkertaistuu, Humphreyn esimerkissä jopa 88 tuntiin~\cite{humphrey1994disciplined}.
 
 Jatkokehitys on vaihe, jossa jo olemassa olevaan ohjelmaan halutaan lisää ominaisuuksia tai parantaa olemassa olevia ominaisuuksia. Pariohjelmoidessa tuotettavat ratkaisut ovat laadultaan parempia ja rivimäärältään pienempiä kuin yksinohjelmoidessa~\cite{costandbenefit2}. Tämä johtaa siihen, että ohjelmaan on helpompi lisätä uusia ominaisuuksia, koska ohjelmakoodissa valmiina olevia virheitä on vähemmän ja se on luettavampaa.
 
